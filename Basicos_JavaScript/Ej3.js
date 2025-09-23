@@ -95,7 +95,7 @@ function test(){
     let cuenta2 = crearCuenta("Maria", 300);
 
     // consultar saldo
-    console.log(consultarSaldo(cuenta1.IBAN) == 500 ? "✅ Test Cunsulta de saldo OK" : "❌ Test deposito FAIL");
+    console.log(consultarSaldo(cuenta1.IBAN) == 500 ? "✅ Test Cunsulta de saldo OK" : "❌ Test consulta de saldo FAIL");
 
     // Depositar
     depositar(cuenta1.IBAN, 200); 
