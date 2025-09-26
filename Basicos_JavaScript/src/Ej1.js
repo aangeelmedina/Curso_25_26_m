@@ -21,7 +21,20 @@ function suma(a,b){
     return a+b;
 }
 
+
+function saludar(nombre){
+    return `bienvenido ${nombre ?? "Usuario"}`;
+}
+
+
+
+const aprobados = (nota=0) =>  "tienes un: "+(nota>=9 ? "sobresaliente" : nota>=5 ? "aprobado" :  "suspenso");
+
+
 //-------- Inicializar aplicacion ---------
 
 console.log(suma(2,2));
 
+console.log(saludar("angel"))
+
+console.log(aprobados(5));
