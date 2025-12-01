@@ -1,5 +1,7 @@
 import { getWeatherImage } from "../utils/getImg";
 
+const VITE_API = import.meta.env.VITE_API;
+
 export default function clima() {
     let weatherContainer;
     let favouritesContainer;
@@ -93,7 +95,6 @@ export default function clima() {
         return footerContainer;
     }
 
-
     const searchCard = () =>{
         const card = document.createElement("div");
         card.classList.add('search-card');
@@ -133,7 +134,7 @@ export default function clima() {
                 return;
             }
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bf200f80d91f3450bd37084f75e03603&units=metric&lang=es`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${VITE_API}&units=metric&lang=es`;
             const data = await feching(url);
 
             if (data) {
